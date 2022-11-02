@@ -1,8 +1,13 @@
 use roller::roller::{roll, Roll};
 
+mod result_printer;
+
 fn main() {
-    let results = roll(&vec![Roll::new(6, 3)]);
-    for result in &results {
-        println!("Result: {:?}\nSum: {}", result.throws, result.sum());
-    }
+    let rolls = vec![
+        Roll::new(6, 10),
+        Roll::new(100, 1),
+        Roll::new(20, 5)
+    ];
+    let results = roll(&rolls);
+    result_printer::print(&results);
 }

@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 clap = "4.0.18"
 rand = "0.8.5"
+cli-table = "0.4.7"
